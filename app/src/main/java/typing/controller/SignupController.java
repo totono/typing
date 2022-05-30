@@ -34,11 +34,13 @@ public class SignupController {
   @FXML
   private Label signup_status;
 
+  //戻るボタン
   public void backToMain(){
     Main m = new Main();
     m.changeScene("login.fxml","Login");
   }
 
+  //テキストフィールド情報から登録する
   public void userSignup() {
     DBUtils.userRegister(register_username.getText(),PasswordEncryption.encryption(register_password.getText()));
     }

@@ -27,6 +27,8 @@ public class Main extends Application {
 		}
 	}
 
+
+	//シーンかえるやつ。いずれSceneControllerクラスを作ってそこにまとめたい
 	public void changeScene(String fxml, String title) {
 		try {
 			BorderPane pane = (BorderPane)FXMLLoader.load(getClass().getResource(fxml));

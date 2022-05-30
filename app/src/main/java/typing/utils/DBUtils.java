@@ -14,6 +14,7 @@ public class DBUtils {
     final static String SQL_PASS = "postgrespw";
     static Jdbi jdbi = Jdbi.create(SQL_URL,SQL_USER,SQL_PASS);
     
+    //アカウント名の存在チェック
     public static boolean isUserExists(String username) {
             return jdbi.withHandle(handle -> 
             {
@@ -24,6 +25,8 @@ public class DBUtils {
             }
         );
     }
+
+    //アカウント名と入力フィールドのパスから資格情報が正しいかどうか
     public static boolean isCorrectCred(String username, String inputPassword){
         Optional<String> encryptedPassword = jdbi.withHandle(handle -> 
         {
@@ -38,6 +41,9 @@ public class DBUtils {
         }
     }
 
+
+    //ユーザーの存在チェックを行い、存在しなければ登録
+    //Todo : 登録されたかどうかをboolで返したい 
     public static void userRegister(String username, String password) {
         if(!(isUserExists(username))){            
             Date date = new Date();

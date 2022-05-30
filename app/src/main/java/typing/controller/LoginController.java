@@ -28,13 +28,19 @@ public class LoginController {
 	@FXML
 	private Label login_status;
 
+
+	//サインアップを押した時の処理
 	public void UserClickedSignup(){
 		Main m = new Main();
 		m.changeScene("signup.fxml","Sign Up");
 	};
 	
+	//Todo : オフラインモード #未実装
 	public void userClickedOfflineMode() {}
 	
+	//ログイン処理
+	//アカウント名とパスワードの一致を確認し、ラベルを変更する
+	//Todo : ゲーム画面への遷移 #未実装
 	public void userLogin(ActionEvent event) throws IOException{
 			if(DBUtils.isCorrectCred(input_username.getText(), input_password.getText())) {
 				login_status.setText("Login success!");
