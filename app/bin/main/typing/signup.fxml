@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e6e6fa;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="typing.controller.SignupController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="266.0" fitWidth="202.0" layoutY="48.0">
+               <image>
+                  <Image url="@img/job_kantokukan_man.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="412.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="register_username" layoutX="169.0" layoutY="82.0" promptText="Username" />
+            <Text layoutX="70.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ユーザ名" />
+            <Text layoutX="72.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="パスワード" />
+            <Button fx:id="button_register" layoutX="171.0" layoutY="294.0" mnemonicParsing="false" onAction="#userSignup" text="Sign up" />
+            <PasswordField fx:id="register_password" layoutX="169.0" layoutY="121.0" promptText="Password" />
+            <Label fx:id="signup_status" layoutX="83.0" layoutY="267.0" prefHeight="20.0" prefWidth="234.0" textFill="#f52b2b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="register_fav_food1" layoutX="169.0" layoutY="165.0" promptText="例: カレーライス" />
+            <TextField fx:id="register_fav_food2" layoutX="169.0" layoutY="200.0" promptText="ラーメン" />
+            <TextField fx:id="register_fav_food3" layoutX="169.0" layoutY="232.0" promptText="麻婆豆腐" />
+            <Text layoutX="32.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="あなたの好きな料理を3つ挙げてください" wrappingWidth="128.181640625" />
+            <Button fx:id="button_back" cancelButton="true" layoutX="20.0" layoutY="25.0" mnemonicParsing="false" onAction="#backToMain" text="戻る" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
